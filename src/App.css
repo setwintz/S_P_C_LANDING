@@ -1,0 +1,275 @@
+.tippy-box[data-theme~='custom'] {
+    background-color: #2196f3; /* Blue background */
+    color: rgb(255, 255, 255);              /* White text */
+    border-radius: 8px;
+    padding: 3px 3px;
+    font-size: 0.875rem;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  /* Optional: Arrow color */
+  .tippy-box[data-theme~='custom'] > .tippy-arrow::before {
+    color: #2196f3;
+  }
+
+
+
+
+
+  
+  /* scrollbar css */
+/* NavMenu.css */
+.custom-scrollbar {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox: Hide scrollbar completely */
+  -ms-overflow-style: none; /* IE and Edge: Hide scrollbar completely */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* WebKit: Hide scrollbar completely */
+}
+
+/* Remove hover effects that show the scrollbar */
+.custom-scrollbar:hover {
+  scrollbar-width: none; /* Firefox: Keep scrollbar hidden on hover */
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar {
+  display: none; /* WebKit: Keep scrollbar hidden on hover */
+}
+
+/* Light mode variables */
+.custom-scrollbar.light {
+  --scrollbar-track: #f1f5f9;
+}
+
+/* Dark mode variables */
+.custom-scrollbar.dark {
+  --scrollbar-track: #2d3748;
+}
+
+
+
+/* active nav item css */
+
+
+/* From Uiverse.io by marcelodolza */ 
+.button {
+  --white: #ffe7ff;
+  --bg: #080808;
+  --radius: 1rem;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  position: relative;
+  border-radius: var(--radius);
+  background-color: var(--bg);
+  transition: all 0.2s ease;
+  box-shadow:
+    inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.3),
+    inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
+    inset 0 -0.4rem 0.9rem rgba(255, 255, 255, 0.5),
+    0 0.2rem 0.3rem rgba(0, 0, 0, 0.3),
+    0 0.8rem 0.90rem -0.6rem rgba(0, 0, 0, 0.8);
+}
+.button .wrap {
+  font-size: 25px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 32px 45px;
+  border-radius: inherit;
+  position: relative;
+  overflow: hidden;
+}
+.button .wrap p span:nth-child(2) {
+  display: none;
+}
+.button:hover .wrap p span:nth-child(1) {
+  display: none;
+}
+.button:hover .wrap p span:nth-child(2) {
+  display: inline-block;
+}
+.button .wrap p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  transition: all 0.2s ease;
+  transform: translateY(2%);
+  mask-image: linear-gradient(to bottom, white 40%, transparent);
+}
+.button .wrap::before,
+.button .wrap::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.button .wrap::before {
+  left: -15%;
+  right: -15%;
+  bottom: 25%;
+  top: -100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.button .wrap::after {
+  left: 6%;
+  right: 6%;
+  top: 12%;
+  bottom: 40%;
+  border-radius: 22px 22px 0 0;
+  box-shadow: inset 0 10px 8px -10px rgba(255, 255, 255, 0.8);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.button:hover {
+  box-shadow:
+    inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.3),
+    inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
+    inset 0 -0.4rem 0.9rem rgba(255, 255, 255, 0.5),
+    0 0.2rem 0.3rem rgba(0, 0, 0, 0.3),
+    0 0.8rem 0.90rem -0.6rem rgba(0, 0, 0, 0.8);
+}
+.button:hover .wrap::before {
+  transform: translateY(-5%);
+}
+.button:hover .wrap::after {
+  opacity: 0.4;
+  transform: translateY(5%);
+}
+.button:hover .wrap p {
+  transform: translateY(-4%);
+}
+.button:active {
+  transform: translateY(4px);
+  box-shadow:
+    inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.3),
+    inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
+    inset 0 -0.4rem 0.9rem rgba(255, 255, 255, 0.5),
+    0 0.2rem 0.3rem rgba(0, 0, 0, 0.3),
+    0 0.8rem 0.90rem -0.6rem rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+/* 3D style css */
+.threeD-style {
+  --white: #ffe7ff;
+  --bg: #080808;
+  --radius: 1.5rem;
+  outline: none;
+  /* cursor: pointer; */
+  border: 0;
+  position: relative;
+  border-radius: var(--radius);
+  background-color: var(--bg);
+  transition: all 0.2s ease;
+  box-shadow:
+    inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.3),
+    inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
+    inset 0 -0.4rem 0.9rem rgba(255, 255, 255, 0.5),
+    0 0.2rem 0.3rem rgba(0, 0, 0, 0.3),
+    0 0.8rem 0.90rem -0.6rem rgba(0, 0, 0, 0.8);
+
+}
+.threeD-style .wrap {
+  font-size: 25px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 32px 45px;
+  border-radius: inherit;
+  position: relative;
+  overflow: hidden;
+}
+.threeD-style .wrap p span:nth-child(2) {
+  display: none;
+}
+.threeD-style:hover .wrap p span:nth-child(1) {
+  display: none;
+}
+.threeD-style:hover .wrap p span:nth-child(2) {
+  display: inline-block;
+}
+.threeD-style .wrap p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  transition: all 0.2s ease;
+  transform: translateY(2%);
+  mask-image: linear-gradient(to bottom, white 40%, transparent);
+}
+.threeD-style .wrap::before,
+.threeD-style .wrap::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.threeD-style .wrap::before {
+  left: -15%;
+  right: -15%;
+  bottom: 25%;
+  top: -100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.threeD-style .wrap::after {
+  left: 6%;
+  right: 6%;
+  top: 12%;
+  bottom: 40%;
+  border-radius: 22px 22px 0 0;
+  box-shadow: inset 0 10px 8px -10px rgba(255, 255, 255, 0.8);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.threeD-style:hover {
+  box-shadow:
+    inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.3),
+    inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
+    inset 0 -0.4rem 0.9rem rgba(255, 255, 255, 0.5),
+    0 0.2rem 0.3rem rgba(0, 0, 0, 0.3),
+    0 0.8rem 0.90rem -0.6rem rgba(0, 0, 0, 0.8);
+}
+.threeD-style:hover .wrap::before {
+  transform: translateY(-5%);
+}
+.threeD-style:hover .wrap::after {
+  opacity: 0.4;
+  transform: translateY(5%);
+}
+.threeD-style:hover .wrap p {
+  transform: translateY(-4%);
+}
+/* .threeD-style:active {
+  transform: translateY(4px);
+  box-shadow:
+    inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.3),
+    inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
+    inset 0 -0.4rem 0.9rem rgba(255, 255, 255, 0.5),
+    0 0.2rem 0.3rem rgba(0, 0, 0, 0.3),
+    0 0.8rem 0.90rem -0.6rem rgba(0, 0, 0, 0.8);
+} */
+
+
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Firefox */
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }

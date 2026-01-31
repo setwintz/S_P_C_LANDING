@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+vendor/
+.npm
+.eslintcache
+.yarn-integrity
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Distribution directories
+build/
+dist/
+public/build/
+
+# Compiled binary addons
+build/Release
+
+# Optional editor or OS files
+.DS_STORE
+*.sublime-project
+*.sublime-workspace
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# Output of 'npm pack'
+*.tgz
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
