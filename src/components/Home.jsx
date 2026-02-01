@@ -324,7 +324,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -16 }}
                 transition={{ duration: 0.25, ease: 'easeOut' }}
-                className=" absolute top-full  bg-gray-50 border-b border-slate-200 shadow-xl z-40"
+                className=" absolute top-full  bg-blue-gray-50 border-b border-slate-400 shadow-xl z-40"
               >
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10 relative">
 
@@ -352,7 +352,7 @@ const Home = () => {
                   <div className="flex flex-col lg:flex-row gap-10">
 
                     
-                    <aside className="w-[100%] lg:w-1/4 border-r-2 pr-2">
+                    <aside className="w-[100%] lg:w-1/4 border border-r-gray-300 pr-2">
                       <h3 className="text-xs font-semibold tracking-wide text-slate-500 uppercase mb-5">
                         Categories
                       </h3>
@@ -456,9 +456,9 @@ const Home = () => {
               </a>
               <a
                 href="#"
-                className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition-all hover:bg-slate-800"
+                className="twoD-style-button-three"
               >
-                Client Portal
+                Sign up
               </a>
             </div>
 
