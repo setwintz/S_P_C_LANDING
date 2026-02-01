@@ -273,3 +273,38 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+
+
+
+
+
+  /* fonts setup */
+
+
+  @font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'); /* Adjust path if needed */
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

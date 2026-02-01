@@ -35,7 +35,7 @@ export default function Section2() {
     return (
         <>
             <div className="min-h-screen  flex flex-col items-center justify-center bg-slate-100 px-4 pt-4 pb-4 text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-900 sm:p-6 lg:p-8 pt-0">
-                <main className="w-[100%] max-w-7xl overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-slate-900/5">
+                <main className="w-[100%] max-w-7xl overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-primary/50">
                     {/* Navigation */}
 
 
@@ -43,10 +43,10 @@ export default function Section2() {
                     <div className="grid items-center gap-12 px-6 py-12 lg:grid-cols-2 grid-cols-1 lg:gap-24 lg:px-16 lg:py-20">
                         {/* Left Content */}
                         <div className="">
-                            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-600">
+                            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary bg-primary/20 px-3 py-1 text-xs font-medium text-primary">
                                 <span className="relative flex h-2 w-2">
                                     {/* <span className="absolute inline-flex h-full w-[100%] animate-ping rounded-full bg-blue-400 opacity-75"></span> */}
-                                    <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
+                                    <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
                                 </span>
                                 Accepting new clients for Q4
                             </div>
@@ -101,8 +101,8 @@ export default function Section2() {
 
                         {/* Right Form */}
                         <div className="relative">
-                            <div className="pointer-events-none absolute -left-12 -bottom-12 h-64 w-64 rounded-full bg-indigo-500/40 blur-3xl"></div>
-                            <div className="pointer-events-none absolute -right-12 -top-12 h-64 w-64 rounded-full bg-blue-500/40 blur-3xl"></div>
+                            <div className="pointer-events-none absolute -left-12 -bottom-12 h-64 w-64 rounded-full bg-primary/40 blur-3xl"></div>
+                            <div className="pointer-events-none absolute -right-12 -top-12 h-64 w-64 rounded-full bg-primaryDark/40 blur-3xl"></div>
                             {/* <div className="pointer-events-none absolute -left-12 -top-12 h-64 w-64 rounded-full bg-indigo-500/40 blur-3xl"></div> */}
 
                             <div className="relative z-[9] rounded-xl border border-slate-100 bg-white p-6 shadow-lg sm:p-8">
@@ -118,16 +118,14 @@ export default function Section2() {
                                             <input
                                                 type="text"
                                                 placeholder="Jane"
-                                                className="w-[100%] rounded-lg border border-slate-200 bg-slate-50 p-2.5 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                                            />
+                                                className='input-base' />
                                         </div>
                                         <div className="space-y-1.5">
                                             <label className="text-xs font-medium text-slate-700">Last name</label>
                                             <input
                                                 type="text"
                                                 placeholder="Doe"
-                                                className="w-[100%] rounded-lg border border-slate-200 bg-slate-50 p-2.5 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                                            />
+                                                className='input-base' />
                                         </div>
                                     </div>
 
@@ -140,23 +138,23 @@ export default function Section2() {
                                             <input
                                                 type="email"
                                                 placeholder="jane@company.com"
-                                                className="w-[100%] rounded-lg border border-slate-200 bg-slate-50 pl-9 p-2.5 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition-all focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                                            />
+                                                className='input-base pl-10' />
                                         </div>
                                     </div>
 
                                     <div className="space-y-1.5">
                                         <label className="text-xs font-medium text-slate-700">Monthly Revenue</label>
                                         <div className="relative">
-                                            <select className="w-[100%] cursor-pointer appearance-none rounded-lg border border-slate-200 bg-slate-50 p-2.5 text-sm text-slate-900 outline-none transition-all focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                                            <select
+                                                className='input-base'                                               >
                                                 <option>Pre-revenue</option>
                                                 <option>$1k - $10k</option>
                                                 <option>$10k - $50k</option>
                                                 <option>$50k+</option>
                                             </select>
-                                            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400">
+                                            {/* <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400">
                                                 <ChevronDown className="h-4 w-4" />
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
 
@@ -174,7 +172,9 @@ export default function Section2() {
 
                                     <button
                                         type="button"
-                                        className="flex w-[100%] items-center justify-center gap-2 rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                                        className="twoD-style-button-three flex w-[100%] justify-center py-2 items-center gap-2"
+
+                                    // className="flex w-[100%] items-center justify-center gap-2 rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
                                     >
                                         Book Assessment
                                         <ArrowRight className="h-4 w-4" />

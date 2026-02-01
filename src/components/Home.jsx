@@ -281,7 +281,7 @@ const Home = () => {
                     <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path>
                   </g>
                 </svg>
-                <span className="font-semibold text-slate-900 tracking-tight text-lg">Setwintz</span>
+                <span className="font-semibold text-gray-800 tracking-tight text-lg">Setwintz</span>
 
               </div>
 
@@ -298,7 +298,7 @@ const Home = () => {
 
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
-              <button className="text-slate-500 hover:text-slate-900">
+              <button className="text-slate-500 hover:text-gray-800">
                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24">
                   <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5h16M4 12h16M4 19h16"></path>
                 </svg>
@@ -324,14 +324,20 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -16 }}
                 transition={{ duration: 0.25, ease: 'easeOut' }}
-                className=" absolute top-full  bg-blue-gray-50 border-b border-slate-400 shadow-xl z-40"
+                className=" absolute top-full  bg-white border-b border-slate-400 shadow-xl z-40"
               >
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10 relative">
+                <div className="max-w-7xl mx-auto  relative">
 
 
-                  <button
+                  <div className='bg-primary/5 border-b-2 px-6 py-4 lg:px-8 flex justify-between items-center'>
+
+                      <h3 className="text-base text-gray-800 font-semibold tracking-wide text-slate-500 uppercase">
+                        Our Soulutions
+                      </h3>
+
+                      <button
                     onClick={() => setIsProductsOpen(false)}
-                    className="absolute top-6 right-6 rounded-full p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition"
+                    className=" top-6 right-6 rounded-full p-2 text-slate-500 hover:text-gray-800 hover:bg-slate-100 transition"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -349,11 +355,21 @@ const Home = () => {
                     </svg>
                   </button>
 
-                  <div className="flex flex-col lg:flex-row gap-10">
+                    </div>
+
+
+                
+
+                   
+
+                  <div className="flex flex-col lg:flex-row gap-10 px-6 lg:px-8 py-10">
+
+
+                   
 
                     
-                    <aside className="w-[100%] lg:w-1/4 border border-r-gray-300 pr-2">
-                      <h3 className="text-xs font-semibold tracking-wide text-slate-500 uppercase mb-5">
+                    <aside className="w-[100%] lg:w-1/4 border-r border-r-gray-300 pr-2">
+                      <h3 className="text-xs font-semibold tracking-wide text-gray-800 uppercase mb-5">
                         Categories
                       </h3>
 
@@ -362,10 +378,10 @@ const Home = () => {
                           <li key={cat}>
                             <button
                               onClick={() => setActiveCategory(cat)}
-                              className={`w-[100%] flex items-center px-4 py-2.5 rounded-lg text-sm font-medium transition
+                              className={`w-[100%] flex items-center px-4 py-2.5 rounded-lg text-base font-medium transition text-gray-700
                         ${activeCategory === cat
                                   ? 'bg-indigo-50 text-indigo-600 border-l-4 border-indigo-600'
-                                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                  : 'text-slate-600 hover:bg-slate-100 hover:text-gray-800'
                                 }
                       `}
                             >
@@ -378,7 +394,7 @@ const Home = () => {
 
                 
                     <section className="w-[100%] lg:w-3/4">
-                      <h3 className="text-lg font-semibold text-slate-900 mb-6">
+                      <h3 className="text-lg font-semibold mb-6 text-gray-800">
                         {activeCategory}
                       </h3>
 
@@ -389,13 +405,13 @@ const Home = () => {
                               key={prod.name}
                               whileHover={{ y: -4 }}
                               transition={{ type: 'spring', stiffness: 300 }}
-                              className="group bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition"
+                              className="group bg-primary/5 border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition"
                             >
-                              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-indigo-50 text-indigo-600 mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+                              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-indigo-50 text-indigo-600  mb-4 group-hover:bg-indigo-600/20  group-hover:text-white transition">
                                 {prod.icon}
                               </div>
 
-                              <h4 className="text-sm font-semibold text-slate-900 mb-1">
+                              <h4 className="text-sm font-semibold text-gray-800 mb-1">
                                 {prod.name}
                               </h4>
 
@@ -433,25 +449,25 @@ const Home = () => {
 
       <nav className={`sticky ${showFirstNav ? 'top-20' : 'top-0'} ${!showFirstNav ? 'bg-white/80 backdrop-blur-md shadow-sm' : ''} z-10  transition-all duration-300 ease-in-out  `}>
 
-        <div className={`max-w-7xl bg-white/80 backdrop-blur-md shadow-sm py-4   mx-auto px-4 sm:px-6 lg:px-8 ${showFirstNav ? 'border border-blue-100' : ''}   rounded-2xl`}>
+        <div className={`max-w-7xl bg-white/80 backdrop-blur-md shadow-sm py-4   mx-auto px-4 sm:px-6 lg:px-8 ${showFirstNav ? 'border border-primary/50' : ''}   rounded-2xl`}>
           <div className="flex justify-between  items-center">
 
             <div className="flex cursor-pointer items-center gap-2 group">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500 text-white shadow-sm transition-colors group-hover:bg-blue-600">
                 <Activity className="h-5 w-5" strokeWidth={1.5} />
               </div>
-              <span className="text-lg font-semibold tracking-tight text-slate-900">Ledger</span>
+              <span className="text-lg font-semibold tracking-tight text-gray-800">Ledger</span>
             </div>
 
             <div className="hidden items-center gap-8 text-sm font-medium text-slate-500 md:flex">
-              <a href="#" className="transition-colors hover:text-slate-900">Solutions</a>
-              <a href="#" className="transition-colors hover:text-slate-900">Pricing</a>
-              <a href="#" className="transition-colors hover:text-slate-900">Resources</a>
-              <a href="#" className="transition-colors hover:text-slate-900">Company</a>
+              <a href="#" className="transition-colors hover:text-gray-800">Solutions</a>
+              <a href="#" className="transition-colors hover:text-gray-800">Pricing</a>
+              <a href="#" className="transition-colors hover:text-gray-800">Resources</a>
+              <a href="#" className="transition-colors hover:text-gray-800">Company</a>
             </div>
 
             <div className="flex items-center gap-4">
-              <a href="#" className="hidden text-sm font-medium text-slate-500 transition-colors hover:text-slate-900 sm:block">
+              <a href="#" className="hidden text-sm font-medium text-slate-500 transition-colors hover:text-gray-800 sm:block">
                 Log in
               </a>
               <a
@@ -488,7 +504,7 @@ const Home = () => {
                     <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path>
                   </g>
                 </svg>
-                <span className="font-semibold text-slate-900 tracking-tight text-lg">Skyline Dwellings</span>
+                <span className="font-semibold text-gray-800 tracking-tight text-lg">Skyline Dwellings</span>
               </div>
               <p className="text-sm text-slate-500 max-w-xs mb-6">Real estate is about more than just four walls. It's about finding your place in the community. Let us guide you home.</p>
               <div className="flex gap-4 text-slate-400">
@@ -517,7 +533,7 @@ const Home = () => {
             </div>
 
             <div>
-              <h4 className="font-semibold text-slate-900 mb-4">Company</h4>
+              <h4 className="font-semibold text-gray-800 mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-slate-500">
                 <li><a href="#" className="hover:text-indigo-600">About Us</a></li>
                 <li><a href="#" className="hover:text-indigo-600">Careers</a></li>
@@ -527,7 +543,7 @@ const Home = () => {
             </div>
 
             <div>
-              <h4 className="font-semibold text-slate-900 mb-4">Resources</h4>
+              <h4 className="font-semibold text-gray-800 mb-4">Resources</h4>
               <ul className="space-y-2 text-sm text-slate-500">
                 <li><a href="#" className="hover:text-indigo-600">Blog</a></li>
                 <li><a href="#" className="hover:text-indigo-600">Guides</a></li>
@@ -536,7 +552,7 @@ const Home = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-slate-900 mb-4">Legal</h4>
+              <h4 className="font-semibold text-gray-800 mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-slate-500">
                 <li><a href="#" className="hover:text-indigo-600">Terms of Service</a></li>
                 <li><a href="#" className="hover:text-indigo-600">Privacy Policy</a></li>
@@ -849,7 +865,7 @@ export default Home;
 //                     <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path>
 //                   </g>
 //                 </svg>
-//                 <span className="font-semibold text-slate-900 tracking-tight text-lg">Setwintz</span>
+//                 <span className="font-semibold text-gray-800 tracking-tight text-lg">Setwintz</span>
 
 //               </div>
 
@@ -866,7 +882,7 @@ export default Home;
 
 //             {/* Mobile menu button */}
 //             <div className="md:hidden flex items-center">
-//               <button className="text-slate-500 hover:text-slate-900">
+//               <button className="text-slate-500 hover:text-gray-800">
 //                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24">
 //                   <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5h16M4 12h16M4 19h16"></path>
 //                 </svg>
@@ -895,7 +911,7 @@ export default Home;
 //                 <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10 relative">
 //                     <button
 //                       onClick={() => setIsProductsOpen(false)}
-//                       className="absolute z-[999] top-6 right-6 rounded-full p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition"
+//                       className="absolute z-[999] top-6 right-6 rounded-full p-2 text-slate-500 hover:text-gray-800 hover:bg-slate-100 transition"
 //                     >
 //                       <svg
 //                         xmlns="http://www.w3.org/2000/svg"
@@ -927,7 +943,7 @@ export default Home;
 //                                 className={`w-[100%] flex items-center px-4 py-2.5 rounded-lg text-sm font-medium transition
 //                         ${activeCategory === cat
 //                                     ? 'bg-indigo-50 text-indigo-600 border-l-4 border-indigo-600'
-//                                     : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+//                                     : 'text-slate-600 hover:bg-slate-100 hover:text-gray-800'
 //                                   }
 //                       `}
 //                               >
@@ -938,7 +954,7 @@ export default Home;
 //                         </ul>
 //                       </aside>
 //                       <section className="w-[100%] lg:w-3/4">
-//                         <h3 className="text-lg font-semibold text-slate-900 mb-6">
+//                         <h3 className="text-lg font-semibold text-gray-800 mb-6">
 //                           {activeCategory}
 //                         </h3>
 
@@ -955,7 +971,7 @@ export default Home;
 //                                   {prod.icon}
 //                                 </div>
 
-//                                 <h4 className="text-sm font-semibold text-slate-900 mb-1">
+//                                 <h4 className="text-sm font-semibold text-gray-800 mb-1">
 //                                   {prod.name}
 //                                 </h4>
 
@@ -995,18 +1011,18 @@ export default Home;
 //               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500 text-white shadow-sm transition-colors group-hover:bg-blue-600">
 //                 <Activity className="h-5 w-5" strokeWidth={1.5} />
 //               </div>
-//               <span className="text-lg font-semibold tracking-tight text-slate-900">Ledger</span>
+//               <span className="text-lg font-semibold tracking-tight text-gray-800">Ledger</span>
 //             </div>
 
 //             <div className="hidden items-center gap-8 text-sm font-medium text-slate-500 md:flex">
-//               <a href="#" className="transition-colors hover:text-slate-900">Solutions</a>
-//               <a href="#" className="transition-colors hover:text-slate-900">Pricing</a>
-//               <a href="#" className="transition-colors hover:text-slate-900">Resources</a>
-//               <a href="#" className="transition-colors hover:text-slate-900">Company</a>
+//               <a href="#" className="transition-colors hover:text-gray-800">Solutions</a>
+//               <a href="#" className="transition-colors hover:text-gray-800">Pricing</a>
+//               <a href="#" className="transition-colors hover:text-gray-800">Resources</a>
+//               <a href="#" className="transition-colors hover:text-gray-800">Company</a>
 //             </div>
 
 //             <div className="flex items-center gap-4">
-//               <a href="#" className="hidden text-sm font-medium text-slate-500 transition-colors hover:text-slate-900 sm:block">
+//               <a href="#" className="hidden text-sm font-medium text-slate-500 transition-colors hover:text-gray-800 sm:block">
 //                 Log in
 //               </a>
 //               <a
@@ -1043,7 +1059,7 @@ export default Home;
 //                     <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path>
 //                   </g>
 //                 </svg>
-//                 <span className="font-semibold text-slate-900 tracking-tight text-lg">Skyline Dwellings</span>
+//                 <span className="font-semibold text-gray-800 tracking-tight text-lg">Skyline Dwellings</span>
 //               </div>
 //               <p className="text-sm text-slate-500 max-w-xs mb-6">Real estate is about more than just four walls. It's about finding your place in the community. Let us guide you home.</p>
 //               <div className="flex gap-4 text-slate-400">
@@ -1072,7 +1088,7 @@ export default Home;
 //             </div>
 
 //             <div>
-//               <h4 className="font-semibold text-slate-900 mb-4">Company</h4>
+//               <h4 className="font-semibold text-gray-800 mb-4">Company</h4>
 //               <ul className="space-y-2 text-sm text-slate-500">
 //                 <li><a href="#" className="hover:text-indigo-600">About Us</a></li>
 //                 <li><a href="#" className="hover:text-indigo-600">Careers</a></li>
@@ -1082,7 +1098,7 @@ export default Home;
 //             </div>
 
 //             <div>
-//               <h4 className="font-semibold text-slate-900 mb-4">Resources</h4>
+//               <h4 className="font-semibold text-gray-800 mb-4">Resources</h4>
 //               <ul className="space-y-2 text-sm text-slate-500">
 //                 <li><a href="#" className="hover:text-indigo-600">Blog</a></li>
 //                 <li><a href="#" className="hover:text-indigo-600">Guides</a></li>
@@ -1091,7 +1107,7 @@ export default Home;
 //               </ul>
 //             </div>
 //             <div>
-//               <h4 className="font-semibold text-slate-900 mb-4">Legal</h4>
+//               <h4 className="font-semibold text-gray-800 mb-4">Legal</h4>
 //               <ul className="space-y-2 text-sm text-slate-500">
 //                 <li><a href="#" className="hover:text-indigo-600">Terms of Service</a></li>
 //                 <li><a href="#" className="hover:text-indigo-600">Privacy Policy</a></li>
