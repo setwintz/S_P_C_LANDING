@@ -8,13 +8,26 @@ import { useSelector } from 'react-redux';
 import { setFalseForShow, setTrueForShow } from '../store/reducer/layout/showTabSlice';
 import { useDispatch } from 'react-redux';
 import images from '../constant/images';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
+
 
 const Home = () => {
+
+  const location = useLocation();
+
+  const pathname = location?.pathname;
+  console.log("pathname", pathname?.split("/")[2]);
+
+
+
+
+
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState('Education');
 
   const store = useSelector((state) => state.showTabSlice);
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const containerRef = useRef(null);
   const [showFirstNav, setShowFirstNav] = useState(true);
@@ -81,7 +94,8 @@ const Home = () => {
             <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
           </svg>
         ),
-        desc: 'Comprehensive management system for schools and educational institutions.'
+        desc: 'Comprehensive management system for schools and educational institutions.',
+        to: "schoolerp"
       },
       {
         name: 'Coaching ERP',
@@ -406,7 +420,12 @@ const Home = () => {
                                 key={prod.name}
                                 whileHover={{ y: -4 }}
                                 transition={{ type: 'spring', stiffness: 300 }}
-                                className="group bg-primary/5 border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition"
+                                className="group cursor-pointer bg-primary/5 border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition"
+                                onClick={() => {
+                                  navigate(`${prod.to}`);
+                                  setIsProductsOpen(false)
+                                }
+                                }
                               >
                                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-indigo-50 text-indigo-600  mb-4 group-hover:bg-indigo-600/20  group-hover:text-white transition">
                                   {prod.icon}
@@ -448,48 +467,55 @@ const Home = () => {
 
       {/* <nav className="flex  sticky top-10  items-center justify-between border-b border-slate-100 px-6 py-5"> */}
 
-      <nav className={`sticky ${showFirstNav ? 'top-20' : 'top-0'} ${!showFirstNav ? 'bg-white/80 backdrop-blur-md shadow-sm' : ''} z-10  transition-all duration-300 ease-in-out  `}>
 
-        <div className={`max-w-7xl bg-white/80 backdrop-blur-md shadow-sm py-4   mx-auto px-4 sm:px-6 lg:px-8 ${showFirstNav ? 'border border-primary/50' : ''}   rounded-2xl`}>
-          <div className="flex justify-between  items-center">
+      {
+        pathname?.split("/")[2] == "schoolerp" ?
 
-            <div className="flex cursor-pointer items-center gap-2 group">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500 text-white shadow-sm transition-colors group-hover:bg-blue-600">
-                <Activity className="h-5 w-5" strokeWidth={1.5} />
+          <nav className={`sticky ${showFirstNav ? 'top-20' : 'top-0'} ${!showFirstNav ? 'bg-white/80 backdrop-blur-md shadow-sm' : ''} z-10  transition-all duration-300 ease-in-out  `}>
+
+            <div className={`max-w-7xl bg-white/80 backdrop-blur-md shadow-sm py-4   mx-auto px-4 sm:px-6 lg:px-8 ${showFirstNav ? 'border border-primary/50' : ''}   rounded-2xl`}>
+              <div className="flex justify-between  items-center">
+
+                <div className="flex cursor-pointer items-center gap-2 group">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500 text-white shadow-sm transition-colors group-hover:bg-blue-600">
+                    <Activity className="h-5 w-5" strokeWidth={1.5} />
+                  </div>
+                  <span className="text-lg font-semibold tracking-tight text-gray-800">School ERP</span>
+                </div>
+
+                <div className="hidden items-center gap-8 text-sm font-medium text-slate-500 md:flex">
+                  <Link to={'/landing/schoolerp/solution'} className="transition-colors hover:text-gray-800">Solutions</Link>
+                  <a href="#" className="transition-colors hover:text-gray-800">Pricing</a>
+                  <a href="#" className="transition-colors hover:text-gray-800">Resources</a>
+                  <a href="#" className="transition-colors hover:text-gray-800">Company</a>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <a href="#" className="hidden text-sm font-medium text-slate-500 transition-colors hover:text-gray-800 sm:block">
+                    Log in
+                  </a>
+                  <a
+                    href="#"
+                    className="twoD-style-button-three"
+                  >
+                    Sign up
+                  </a>
+                </div>
+
               </div>
-              <span className="text-lg font-semibold tracking-tight text-gray-800">Ledger</span>
+
+
+
             </div>
 
-            <div className="hidden items-center gap-8 text-sm font-medium text-slate-500 md:flex">
-              <a href="#" className="transition-colors hover:text-gray-800">Solutions</a>
-              <a href="#" className="transition-colors hover:text-gray-800">Pricing</a>
-              <a href="#" className="transition-colors hover:text-gray-800">Resources</a>
-              <a href="#" className="transition-colors hover:text-gray-800">Company</a>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <a href="#" className="hidden text-sm font-medium text-slate-500 transition-colors hover:text-gray-800 sm:block">
-                Log in
-              </a>
-              <a
-                href="#"
-                className="twoD-style-button-three"
-              >
-                Sign up
-              </a>
-            </div>
-
-          </div>
+          </nav>
 
 
+          : ""
+      }
 
-        </div>
 
-      </nav>
-
-      {/* <Section /> */}
-
-      <Section2 />
+      <Outlet />
 
 
       {/* 14. Footer */}

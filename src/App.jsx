@@ -8,7 +8,11 @@ import AuthLayout from "./layout/AuthLayout";
 // before login pages
 const Login = lazy(() => import("../src/pages/login/Login"));
 const SignUp = lazy(() => import("../src/pages/signup/SignUp"));
-const Landing = lazy(() => import("../src/components/Home"));
+const LandingLayout = lazy(() => import("../src/components/Home"));
+const Section = lazy(() => import("../src/pages/Landing/Section"))
+const Section2 = lazy(() => import("../src/pages/Landing/Section2"));
+const Section2A = lazy(() => import("../src/pages/Landing/Section2A"));
+const SchoolErpSolution = lazy(() => import("../src/pages/Landing/SchoolErpSolution"))
 
 
 const Layout = lazy(() => import("./layout/Layout"));
@@ -118,7 +122,17 @@ export default function App() {
             <Route path="/" element={<Login2 />} />
             <Route path="/login" element={<Login2 />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/landing" element={<Landing />} />
+            <Route path="/landing" element={<LandingLayout />} >
+
+              <Route index element={<Section />} />
+              <Route path="schoolerp" element={<Section2 />} >
+              <Route index element={<Section2A />} />
+              <Route path="solution" element={<SchoolErpSolution />} />
+
+
+              </Route>
+
+            </Route>
 
           </Route>
 
@@ -126,11 +140,11 @@ export default function App() {
 
 
 
-          {/* organizations */}
+            {/* organizations */}
 
-              <Route path="organizations" element={<ListOrganizations />} />
-              <Route path="example" element={<Example />} />
-              {/* <Route path="sss" element={<Login2 />} /> */}
+            <Route path="organizations" element={<ListOrganizations />} />
+            <Route path="example" element={<Example />} />
+            {/* <Route path="sss" element={<Login2 />} /> */}
 
 
 
