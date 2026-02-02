@@ -18,6 +18,8 @@ import setwintzLight from "../assets/logo/setwintLight.png"
 import setwintzDark from "../assets/logo/setwintzDark.png"
 import setwintzShort from "../assets/logo/setwintzShort.png"
 import noData3 from "../assets/images/nodata3.png"
+import footerBg from "../assets/images/footerBg.jpg"
+import footerBg2 from "../assets/images/footerBg2.avif"
 
 
 export default {
@@ -39,5 +41,7 @@ export default {
    noData3,
    setwintzLight,
    setwintzDark,
-   setwintzShort
+   setwintzShort,
+   footerBg,
+   footerBg2
 }
