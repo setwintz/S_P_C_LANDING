@@ -305,9 +305,10 @@ const Home = () => {
 
             <div className="hidden md:flex space-x-8 items-center">
 
-              <button onClick={() => setIsProductsOpen(!isProductsOpen)} className="text-sm flex items-center gap-1 font-medium text-slate-600 hover:text-indigo-600 transition-colors">Products <span className={`${isProductsOpen ? "rotate-180" : ""}`}><MdOutlineKeyboardArrowDown size={20} /></span></button>
-              <a href="#" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">Partner</a>
-              <a href="#" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">we are</a>
+              <button onClick={() => setIsProductsOpen(!isProductsOpen)} className=" flex items-center gap-1 text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors transition-colors">Products <span className={`${isProductsOpen ? "rotate-180" : ""}`}><MdOutlineKeyboardArrowDown size={20} /></span></button>
+              <a href="#" className="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors ">Become A Partner</a>
+              <a href="#" className="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors">About Us</a>
+              <a href="#" className="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Contact Us</a>
 
             </div>
 
