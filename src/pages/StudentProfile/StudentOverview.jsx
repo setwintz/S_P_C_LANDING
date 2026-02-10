@@ -405,6 +405,111 @@ const StudentOverview = () => {
                   </div>
                 </div>
               </div>
+               <div className="bg-pink-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-4">Mother Details</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Name</label>
+                    <div className="text-base text-gray-900">Jennifer Johnson</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Occupation</label>
+                    <div className="text-base text-gray-900">Teacher</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Phone</label>
+                    <div className="text-base text-gray-900">+1 234-567-8999</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Email</label>
+                    <div className="text-base text-gray-900">jennifer.j@email.com</div>
+                  </div>
+                </div>
+              </div>
+               <div className="bg-pink-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-4">Mother Details</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Name</label>
+                    <div className="text-base text-gray-900">Jennifer Johnson</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Occupation</label>
+                    <div className="text-base text-gray-900">Teacher</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Phone</label>
+                    <div className="text-base text-gray-900">+1 234-567-8999</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Email</label>
+                    <div className="text-base text-gray-900">jennifer.j@email.com</div>
+                  </div>
+                </div>
+              </div>
+               <div className="bg-pink-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-4">Mother Details</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Name</label>
+                    <div className="text-base text-gray-900">Jennifer Johnson</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Occupation</label>
+                    <div className="text-base text-gray-900">Teacher</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Phone</label>
+                    <div className="text-base text-gray-900">+1 234-567-8999</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Email</label>
+                    <div className="text-base text-gray-900">jennifer.j@email.com</div>
+                  </div>
+                </div>
+              </div>
+               <div className="bg-pink-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-4">Mother Details</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Name</label>
+                    <div className="text-base text-gray-900">Jennifer Johnson</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Occupation</label>
+                    <div className="text-base text-gray-900">Teacher</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Phone</label>
+                    <div className="text-base text-gray-900">+1 234-567-8999</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Email</label>
+                    <div className="text-base text-gray-900">jennifer.j@email.com</div>
+                  </div>
+                </div>
+              </div>
+               <div className="bg-pink-50 p-6 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-4">Mother Details</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Name</label>
+                    <div className="text-base text-gray-900">Jennifer Johnson</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Occupation</label>
+                    <div className="text-base text-gray-900">Teacher</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Phone</label>
+                    <div className="text-base text-gray-900">+1 234-567-8999</div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-600 dark:text-gray-800 mb-1">Email</label>
+                    <div className="text-base text-gray-900">jennifer.j@email.com</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         );

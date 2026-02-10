@@ -126,8 +126,8 @@ export default function App() {
 
               <Route index element={<Section />} />
               <Route path="schoolerp" element={<Section2 />} >
-              <Route index element={<Section2A />} />
-              <Route path="solution" element={<SchoolErpSolution />} />
+                <Route index element={<Section2A />} />
+                <Route path="solution" element={<SchoolErpSolution />} />
 
 
               </Route>
