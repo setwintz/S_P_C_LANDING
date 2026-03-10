@@ -50,7 +50,7 @@ const CreateUnit = lazy(() => import("../src/pages/unit/CreateUnit"));
 const CreateAdmin = lazy(() => import("../src/pages/admin/CreateAdmin"));
 const Admin = lazy(() => import("../src/pages/admin/Admin"));
 const Years = lazy(() => import("../src/pages/years/Years"));
-const AcademicShiftType = lazy(() => import("../src/pages/academicShiftType/academicShiftType"));
+// const AcademicShiftType = lazy(() => import("../src/pages/academicShiftType/academicShiftType"));
 const Classes = lazy(() => import("../src/pages/class/Class"));
 const Curriculum = lazy(() => import("../src/pages/curriculumn/Curriculum"));
 const AcademicYear = lazy(() => import("../src/pages/academicYear/AcademicYear"));
@@ -181,7 +181,7 @@ export default function App() {
               <Route path="system/setting/academic/year" element={<AcademicYearSetting />} />
               <Route path="settings/academic/medium" element={<Medium />} />
               <Route path="settings/academic/years" element={<Years />} />
-              <Route path="settings/academic/shift-type" element={<AcademicShiftType />} />
+              {/* <Route path="settings/academic/shift-type" element={<AcademicShiftType />} /> */}
               <Route path="settings/class" element={<Classes />} />
               <Route path="settings/academic/curriculum" element={<Curriculum />} />
               <Route path="settings/academic/year" element={<AcademicYear />} />
