@@ -122,7 +122,7 @@ export default function App() {
             <Route path="/" element={<Login2 />} />
             <Route path="/login" element={<Login2 />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/landing" element={<LandingLayout />} >
+            <Route path="/" element={<LandingLayout />} >
 
               <Route index element={<Section />} />
               <Route path="schoolerp" element={<Section2 />} >
